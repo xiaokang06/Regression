@@ -85,16 +85,15 @@ public class Regression {
         
         int correct = 0;
         //方式一
+        System.out.println("predicted : actual");
         for (int i = 0; i < predictions.size(); i++) {
 			NominalPrediction np = (NominalPrediction) predictions.elementAt(i);
 			//System.out.println("---" + np.predicted());
 			//System.out.println("+++" + np.actual());
-			System.out.println();
+			System.out.println(np.predicted() + " : " + np.actual());
 			if (np.predicted() == np.actual()) {
 				correct++;
 			}
-			
-			System.out.println("--------------------------------");
         }
         System.out.println("correct:" + correct);
         System.out.println("logistic regression predict is over!!");
